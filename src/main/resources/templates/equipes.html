@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/principal-fragment}">
+<div class="content" layout:fragment="content">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Lista de jogadores</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table" th:each="e : ${equipes}">
+                        <thead>
+                        <tr>
+                            <th scope="col">Equipe</th>
+                            <th scope="col">Cor</th>
+                            <th scope="col">Jogadores</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>[[${e.eqNome}]]</td>
+                            <td>[[${e.eqCor}]]</td>
+                            <td>12</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <td>Listagem de todas as equipes por ordem alfabética</td>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
+<script layout:fragment="javascript">
+    $(document).ready(function() {
+        loadDataTable();
+    });
+</script>
+</html>

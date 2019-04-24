@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/principal-fragment}">
+    <div class="content" layout:fragment="content">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Como usar o sistema</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Cadastre uma equipe</li>
+                            <li class="list-group-item">Cadastre jogadores</li>
+                            <li class="list-group-item">Inclua jogadores na equipe</li>
+                            <li class="list-group-item">Veja e pesquise listas de jogadores de acordo com equipes ou nomes</li>
+                            <li class="list-group-item">Edite e delete seus dados cadastrados</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="float-left">
+                            <button type="button" class="btn-lg btn-primary">Jogadores</button>
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn-lg btn-primary">Equipes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
