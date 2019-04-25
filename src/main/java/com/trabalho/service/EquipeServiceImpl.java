@@ -19,6 +19,10 @@ public class EquipeServiceImpl extends BaseService implements EquipeService {
         return equipeDao.findAll();
     }
 
+    public Equipe findById(int eqId) {
+        return equipeDao.findById(eqId);
+    }
+
     public void add(Equipe equipe) {
         equipeDao.save(equipe);
     }

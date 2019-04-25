@@ -2,20 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{fragments/principal-fragment}">
-<div class="content" layout:fragment="content">
-    <div class="row">
+    <div class="content" layout:fragment="content">
         <div class="col-sm">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Lista de jogadores</h5>
+                    <h5 class="card-title">[[${equipe.eqNome}]]</h5>
+                    <p>Listagem de jogadores</p>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table table-hover">
                         <thead>
-                            <tr>
-                                <th scope="col">Jogador</th>
-                                <th scope="col">Idade</th>
-                            </tr>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                        </tr>
                         </thead>
                         <tbody>
                             <tr th:each="j : ${jogadores}">
@@ -23,16 +23,15 @@
                                 <td>[[${j.jgIdade}]]</td>
                             </tr>
                         </tbody>
+                        <tfoot>
+                            <td colspan="2">Listagem dos jogadores da equipe por ordem alfabética</td>
+                        </tfoot>
                     </table>
                 </div>
                 <div class="card-footer">
-                    <td>Listagem de todos os jogadores por ordem alfabética</td>
+                    <a class="btn btn-secondary" th:href="@{/equipes/list}">Voltar</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm">
-
-        </div>
     </div>
-</div>
 </html>

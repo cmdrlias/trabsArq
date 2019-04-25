@@ -5,6 +5,13 @@ public interface WebURIs {
             "/",
             "/index",
             "/jogadores",
+            "/jogadores/list",
+            "/jogadores/novo",
+            "/jogadores/excluir",
             "/equipes",
+            "/equipes/list",
+            "/equipes/detalhes",
+            "/equipes/nova",
+            "equipes/excluir"
     };
 }

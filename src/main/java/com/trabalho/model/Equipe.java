@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name="equipe")
@@ -22,6 +23,12 @@ public class Equipe implements Serializable {
 
     @Column(name="eq_cor")
     private String eqCor;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name="jogador_equipe",
+            joinColumns={@JoinColumn(name="eq_id")},
+            inverseJoinColumns={@JoinColumn(name="jg_id")})
+    private List<Jogador> jogadores;
 
     public Equipe() { }
 
@@ -47,5 +54,13 @@ public class Equipe implements Serializable {
 
     public void setEqCor(String eqCor) {
         this.eqCor = eqCor;
+    }
+
+    public List<Jogador> getJogadores() {
+        return jogadores;
+    }
+
+    public void setJogadores(List<Jogador> jogadores) {
+        this.jogadores = jogadores;
     }
 }

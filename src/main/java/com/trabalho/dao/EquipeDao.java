@@ -9,4 +9,6 @@ import java.util.List;
 public interface EquipeDao extends JpaRepository<Equipe, Integer> {
     @Query("select e from Equipe e ORDER BY eqNome")
     List<Equipe> findAll();
+
+    Equipe findById(int eqId);
 }

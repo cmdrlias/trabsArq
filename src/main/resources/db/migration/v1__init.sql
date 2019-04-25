@@ -13,8 +13,8 @@ CREATE TABLE equipe (
 );
 
 CREATE TABLE jogador_equipe (
-    jg_id INT NOT NULL,
-    eq_id INT NOT NULL,
+    jg_id    INT NOT NULL,
+    eq_id    INT NOT NULL,
     PRIMARY KEY (jg_id, eq_id)
 );
 
